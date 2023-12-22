@@ -4,6 +4,7 @@ import { styles } from "@/styles";
 import { ComputersCanvas } from "@/components/canvas";
 
 const Hero = () => {
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
