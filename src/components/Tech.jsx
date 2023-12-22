@@ -66,15 +66,15 @@ const Tech = () => {
     },
   ];
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
+    <div className="flex flex-row flex-wrap  justify-center   gap-10">
       {tecs.map(({ id, imgUrl, title }) => (
-        <div onMouseOver={() => setActive(id)} className="w-28 h-28" key={id}>
-          <img src={imgUrl} alt={title} className=" w-60 h-60 " />
+        <div onMouseOver={() => setActive(id)} className=" w-40 h-40 " key={id}>
+          <img src={imgUrl} alt={title} className=" " />
           {active !== id ? (
             ""
           ) : (
-            <div className="absolute bottom-[-20px] rounded-lg shadow-xl p-2 shadow-black dark:shadow-white  duration-200  ">
-              <h2>{title}</h2>
+            <div className=" flex items-center justify-center p-4  ">
+              <h2 className="absolute">{title}</h2>
             </div>
           )}
         </div>

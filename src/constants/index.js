@@ -128,7 +128,7 @@ const experiences = [
     title: "React Native Developer",
     company_name: "Tesla",
     icon: tesla,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Jan 2021 - Feb 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -154,7 +154,7 @@ const experiences = [
     title: "Full stack Developer",
     company_name: "Meta",
     icon: meta,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Jan 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
