@@ -3,7 +3,13 @@ import { motion } from "framer-motion";
 import { styles } from "@/styles";
 import { github } from "@/assets";
 import { SectionWrapper } from "@/hoc";
-import { projects } from "@/constants";
+
+import magrey from "@/assets/works/mock-magrey.png";
+import eliana from "@/assets/works/mock-eliana.png";
+import wfs from "@/assets/works/mock-wfs.png";
+import visalaw from "@/assets/works/mock-visalaw.png";
+import { TbHandClick } from "react-icons/tb";
+
 import { fadeIn, textVariant } from "@/utils/motion";
 
 const ProjectCard = ({
@@ -15,7 +21,11 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      className="cursor-pointer"
+      onClick={() => window.open(source_code_link, "_blank")}
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    >
       <Tilt
         options={{
           max: 45,
@@ -28,9 +38,9 @@ const ProjectCard = ({
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-contain rounded-2xl"
           />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          {/*   <div className="absolute top-48 inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -41,7 +51,7 @@ const ProjectCard = ({
                 className="w-1/2 h-1/2 object-contain"
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-5 ">
@@ -62,6 +72,80 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const projects = [
+    {
+      name: "Barberia Magrey",
+      description:
+        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      tags: [
+        {
+          name: "html",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "css",
+          color: "green-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: magrey,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "Need Weed",
+      description:
+        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      tags: [
+        {
+          name: "react js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind css",
+          color: "green-text-gradient",
+        },
+      ],
+      image: eliana,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "EB-3 Workforce Solutions",
+      description:
+        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      tags: [
+        {
+          name: "react js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind css",
+          color: "green-text-gradient",
+        },
+      ],
+      image: wfs,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: "EB Visa Law",
+      description:
+        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      tags: [
+        {
+          name: "react js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "green-text-gradient",
+        },
+      ],
+      image: visalaw,
+      source_code_link: "https://github.com/",
+    },
+  ];
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -75,8 +159,8 @@ const Works = () => {
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Following projects showcases my skills and experience through
-          real-world examples ofmy work. Each projects is briefly described with
-          links to code repositories and live demons in it. It reflects my
+          real-world examples of my work. Each projects is briefly described
+          with links to code repositories and live demos in it. It reflects my
           ability to solve complex problems, work with differente technologies,
           and manage projects effectively.
         </motion.p>
