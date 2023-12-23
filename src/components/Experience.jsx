@@ -7,10 +7,14 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "@/styles";
-import { experiences } from "@/constants";
+
 import { SectionWrapper } from "@/hoc";
 import { textVariant } from "@/utils/motion";
-import { PointLightHelper } from "three";
+import meta from "@/assets/company/meta.png";
+import eb3 from "@/assets/company/eb3.png";
+import manager from "@/assets/company/manager.png";
+import needweed from "@/assets/company/needweed.png";
+import magrey from "@/assets/company/magrey.png";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -24,7 +28,7 @@ const ExperienceCard = ({ experience }) => {
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
+            className="p-1 object-cover"
           />
         </div>
       }
@@ -53,6 +57,60 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const experiences = [
+    {
+      title: "React JS Developer",
+      company_name: "EB-3 Workforce Solutions",
+      icon: eb3,
+      iconBg: "#E6DEDD",
+      date: "March 2020 - April 2021",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+    {
+      title: "React JS Developer",
+      company_name: "Manager asociados S.A.S",
+      icon: manager,
+      iconBg: "#E6DEDD",
+      date: "Jan 2021 - Feb 2022",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+    {
+      title: "React JS Developer",
+      company_name: "Need Weed",
+      icon: needweed,
+      iconBg: "#E6DEDD",
+      date: "Jan 2022 - Jan 2023",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+    {
+      title: "Web Developer",
+      company_name: "Barberia Magrey",
+      icon: magrey,
+      iconBg: "#E6DEDD",
+      date: "Jan 2023 - Present",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+  ];
   return (
     <>
       <motion.div variants={textVariant()}>
