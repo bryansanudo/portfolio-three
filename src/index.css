@@ -202,3 +202,27 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+
+.color-html {
+  color: #F16529
+}
+
+.color-css {
+  color: #2965F1
+}
+
+.color-javascript {
+  color: #FECA2A
+}
+
+.color-tailwind {
+  color: #07B6D5
+}
+.color-react {
+  color: #61DAFB
+}
+
+.color-motion {
+  color:#BB4B96
+}

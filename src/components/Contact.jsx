@@ -53,7 +53,7 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounde-lg outline-none border-nonae font-medium"
             />
           </label>
@@ -70,7 +70,7 @@ const Contact = () => {
           </label>
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary py-3 px-8 outline-none  text-white font-bold shadow-md shadow-primary rounded-xl w-full hover:scale-110 duration-700"
           >
             {loading ? "Sending..." : "Send"}
           </button>

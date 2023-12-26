@@ -65,10 +65,12 @@ const Experience = () => {
       iconBg: "#E6DEDD",
       date: "March 2020 - April 2021",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Design, Developing and maintaining web applications using React JS and other related technologies",
+        "Implementing responsive design",
+        "third-party application integrations",
+        "Collaborating with cross-functional members of team to create high-quality products",
+        "Implement and execute email marketing strategies through ActiveCampaign",
+        "Design of pieces for social media",
       ],
     },
     {
@@ -78,10 +80,9 @@ const Experience = () => {
       iconBg: "#E6DEDD",
       date: "Jan 2021 - Feb 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Design, Developing and maintaining web applications using React JS and other related technologies",
+        "Implementing responsive design",
+        "third-party application integrations",
       ],
     },
     {
@@ -91,10 +92,8 @@ const Experience = () => {
       iconBg: "#E6DEDD",
       date: "Jan 2022 - Jan 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Design, Developing and maintaining web applications using React JS and other related technologies",
+        "Implementing responsive design",
       ],
     },
     {
@@ -104,10 +103,10 @@ const Experience = () => {
       iconBg: "#E6DEDD",
       date: "Jan 2023 - Present",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Develop an attractive and functional user interface using HTML and CSS",
+        "Implement responsive  ",
+        "Create a contact form to facilitate user interaction and receive comments",
+        "Design interactive and attractive sections using CSS to improve site aesthetics",
       ],
     },
   ];

@@ -76,19 +76,15 @@ const Works = () => {
     {
       name: "Barberia Magrey",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "This project is written entirely in HTML, CSS and some JavaScriptThis, basically is a landing page that describes services and benefits of a Premium Barber Shop. ",
       tags: [
         {
           name: "html",
-          color: "blue-text-gradient",
+          color: "color-html",
         },
         {
           name: "css",
-          color: "green-text-gradient",
-        },
-        {
-          name: "javascript",
-          color: "pink-text-gradient",
+          color: "color-css",
         },
       ],
       image: magrey,
@@ -97,15 +93,19 @@ const Works = () => {
     {
       name: "Need Weed",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "This project is a prototype of a full stack application, is a shopping cart with custom design and website product management . ",
       tags: [
         {
           name: "react js",
-          color: "blue-text-gradient",
+          color: "color-react",
+        },
+        {
+          name: "firebase",
+          color: "color-javascript",
         },
         {
           name: "tailwind css",
-          color: "green-text-gradient",
+          color: "color-tailwind",
         },
       ],
       image: eliana,
@@ -118,11 +118,15 @@ const Works = () => {
       tags: [
         {
           name: "react js",
-          color: "blue-text-gradient",
+          color: "color-react",
+        },
+        {
+          name: "framer motion",
+          color: "color-motion",
         },
         {
           name: "tailwind css",
-          color: "green-text-gradient",
+          color: "color-tailwind",
         },
       ],
       image: wfs,
@@ -135,11 +139,11 @@ const Works = () => {
       tags: [
         {
           name: "react js",
-          color: "blue-text-gradient",
+          color: "color-react",
         },
         {
           name: "tailwind",
-          color: "green-text-gradient",
+          color: "color-tailwind",
         },
       ],
       image: visalaw,
@@ -160,9 +164,9 @@ const Works = () => {
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each projects is briefly described
-          with links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with differente technologies,
-          and manage projects effectively.
+          with links to live demos in it. It reflects my ability to solve
+          complex problems, work with differente technologies, and manage
+          projects effectively.
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7 ">

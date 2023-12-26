@@ -11,6 +11,8 @@ import motion from "@/assets/img/motion.svg";
 import illustrator from "@/assets/img/illustrator.svg";
 import firebase from "@/assets/img/firebase.svg";
 
+import Tilt from "react-parallax-tilt";
+
 const Tech = () => {
   const [active, setActive] = useState("tec-2");
   const tecs = [
@@ -66,17 +68,29 @@ const Tech = () => {
     },
   ];
   return (
-    <div className="flex flex-row flex-wrap  justify-center   gap-10">
+    <div className="grid grid-cols-5 ">
       {tecs.map(({ id, imgUrl, title }) => (
-        <div onMouseOver={() => setActive(id)} className=" w-40 h-40 " key={id}>
-          <img src={imgUrl} alt={title} className=" " />
-          {active !== id ? (
-            ""
-          ) : (
-            <div className=" flex items-center justify-center p-4  ">
-              <h2 className="absolute">{title}</h2>
-            </div>
-          )}
+        <div
+          onMouseOver={() => setActive(id)}
+          className="w-40 h-40 mb-6 "
+          key={id}
+        >
+          <Tilt
+            className={`${
+              active !== id ? "" : "shadow-card bg-tertiary rounded-[20px]"
+            }`}
+          >
+            <img src={imgUrl} alt={title} className=" " />
+            {active !== id ? (
+              ""
+            ) : (
+              <div className=" flex items-center justify-center p-4  ">
+                <h2 className="absolute text-white text-[20px] font-bold text-center mb-4">
+                  {title}
+                </h2>
+              </div>
+            )}
+          </Tilt>
         </div>
       ))}
     </div>
