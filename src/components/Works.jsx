@@ -9,6 +9,16 @@ import eliana from "@/assets/works/mock-eliana.png";
 import wfs from "@/assets/works/mock-wfs.png";
 import visalaw from "@/assets/works/mock-visalaw.png";
 import { TbHandClick } from "react-icons/tb";
+import react from "@/assets/img/reactjs.svg";
+import tailwind from "@/assets/img/tailwind.svg";
+import figma from "@/assets/img/figma.svg";
+import js from "@/assets/img/js.svg";
+import css from "@/assets/img/css.svg";
+import html from "@/assets/img/html.svg";
+import gitHub from "@/assets/img/gitHub.svg";
+import framer from "@/assets/img/motion.svg";
+import illustrator from "@/assets/img/illustrator.svg";
+import firebase from "@/assets/img/firebase.svg";
 
 import { fadeIn, textVariant } from "@/utils/motion";
 
@@ -40,18 +50,6 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full object-contain rounded-2xl"
           />
-          {/*   <div className="absolute top-48 inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div> */}
         </div>
 
         <div className="mt-5 ">
@@ -61,9 +59,13 @@ const ProjectCard = ({
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
+            <div key={tag.name}>
+              <img
+                src={tag.img}
+                className={`w-8 h-8 shadow-md rounded-full ${tag.shadow}  `}
+                alt=""
+              />
+            </div>
           ))}
         </div>
       </Tilt>
@@ -81,10 +83,13 @@ const Works = () => {
         {
           name: "html",
           color: "color-html",
+          img: html,
+          shadow: "shadow-[#FECA2A]",
         },
         {
           name: "css",
           color: "color-css",
+          img: css,
         },
       ],
       image: magrey,
@@ -98,14 +103,18 @@ const Works = () => {
         {
           name: "react js",
           color: "color-react",
+          img: react,
         },
         {
           name: "firebase",
           color: "color-javascript",
+          img: firebase,
+          shadow: "shadow-[#FECA2A]",
         },
         {
           name: "tailwind css",
           color: "color-tailwind",
+          img: tailwind,
         },
       ],
       image: eliana,
@@ -119,14 +128,17 @@ const Works = () => {
         {
           name: "react js",
           color: "color-react",
+          img: react,
         },
         {
           name: "framer motion",
           color: "color-motion",
+          img: framer,
         },
         {
           name: "tailwind css",
           color: "color-tailwind",
+          img: tailwind,
         },
       ],
       image: wfs,
@@ -140,10 +152,12 @@ const Works = () => {
         {
           name: "react js",
           color: "color-react",
+          img: react,
         },
         {
           name: "tailwind",
           color: "color-tailwind",
+          img: tailwind,
         },
       ],
       image: visalaw,

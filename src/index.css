@@ -205,24 +205,38 @@
 
 
 .color-html {
-  color: #F16529
+  
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #F16529, 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .color-css {
-  color: #2965F1
+  
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #2965F1, 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .color-javascript {
-  color: #FECA2A
+ 
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #FECA2A, 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .color-tailwind {
-  color: #07B6D5
+  
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #07B6D5, 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
+
 .color-react {
-  color: #61DAFB
+  
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #07B6D5, 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .color-motion {
-  color:#BB4B96
+ 
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #BB4B96, 0 0 0 2px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
+

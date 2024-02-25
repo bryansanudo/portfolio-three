@@ -52,10 +52,7 @@ const services = [
     title: "Diseño Web",
     icon: responsivo,
   },
-  {
-    title: "Trabajo Estratégico",
-    icon: plan,
-  },
+
   {
     title: "Email Marketing",
     icon: mail,
