@@ -3,6 +3,8 @@ import {
   backend,
   creator,
   web,
+  plan,
+  responsivo,
   javascript,
   typescript,
   html,
@@ -23,6 +25,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  mail,
 } from "../assets";
 
 export const navLinks = [
@@ -42,16 +45,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Desarrollo Web",
     icon: web,
   },
   {
-    title: "React JS Developer",
-    icon: mobile,
+    title: "Diseño Web",
+    icon: responsivo,
   },
   {
-    title: "Web Designer",
-    icon: backend,
+    title: "Trabajo Estratégico",
+    icon: plan,
+  },
+  {
+    title: "Email Marketing",
+    icon: mail,
   },
 ];
 
