@@ -1,12 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "@/styles";
-import { navLinks } from "@/constants";
+
 import { logo, menu, close } from "@/assets";
-const Navbar = () => {
+
+import LanguageController from "@/components/LanguageController";
+
+const Navbar = ({ language, setLanguage }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
-
+  const navLinks = [
+    {
+      id: "about",
+      title: "About",
+    },
+    {
+      id: "work",
+      title: "Work",
+    },
+    {
+      id: "contact",
+      title: "Contact",
+    },
+  ];
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
@@ -29,6 +45,7 @@ const Navbar = () => {
             </span>
           </p>
         </Link>
+
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
@@ -41,6 +58,9 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+          <li>
+            <LanguageController language={language} setLanguage={setLanguage} />
+          </li>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img

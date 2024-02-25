@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { styles } from "@/styles";
-import { services } from "@/constants";
+
 import { fadeIn, textVariant } from "@/utils/motion";
 import Tilt from "react-parallax-tilt";
 import { SectionWrapper } from "@/hoc";
+import web from "@/assets/web.png";
+import mail from "@/assets/mail.png";
+import responsivo from "@/assets/responsivo.png";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -27,6 +30,21 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
+  const services = [
+    {
+      title: "Desarrollo Web",
+      icon: web,
+    },
+    {
+      title: "Diseño Web",
+      icon: responsivo,
+    },
+
+    {
+      title: "Email Marketing",
+      icon: mail,
+    },
+  ];
   return (
     <>
       <motion.div variants={textVariant()}>

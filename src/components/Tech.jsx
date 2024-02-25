@@ -54,7 +54,7 @@ const Tech = () => {
     {
       id: "tec-8",
       imgUrl: motion,
-      title: "Motion",
+      title: "Framer Motion",
     },
     {
       id: "tec-9",
