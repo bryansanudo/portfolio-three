@@ -22,5 +22,30 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#050816",
+
+          secondary: "#aaa6c3",
+
+          accent: "#00040f",
+
+          neutral: "#000000",
+
+          "base-100": "#FFFFFF",
+
+          info: "#94171A",
+
+          success: "#00f6ff",
+
+          warning: "#94171A",
+
+          error: "#F87272",
+        },
+      },
+    ],
+  },
 };

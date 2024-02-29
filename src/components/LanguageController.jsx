@@ -4,7 +4,7 @@ import colImg from "@/assets/col.png";
 import enImg from "@/assets/en.png";
 import { styles } from "@/styles";
 
-const LanguageController = ({ language = "en", setLanguage, darkMode }) => {
+const LanguageController = ({ language = "en", setLanguage }) => {
   const [dropdown, setDropdown] = useState(true);
 
   const handleDropdown = () => {
@@ -35,28 +35,29 @@ const LanguageController = ({ language = "en", setLanguage, darkMode }) => {
   let languageIcon;
 
   if (language === "en") {
-    languageText = "USD";
+    languageText = "Language";
     languageIcon = enImg;
   } else if (language === "es") {
-    languageText = "COP";
+    languageText = "Lenguaje";
     languageIcon = colImg;
   }
   return (
     <>
-      <details className={`dropdown dropdown-left  ${styles.subtitle}`}>
+      <details className={`dropdown text-white   ${styles.subtitle}`}>
         <summary
           onClick={handleDropdown}
-          className={`uppercase  flex  items-center justify-center gap-1 cursor-pointer ${styles.title}`}
+          className={` flex  items-center justify-center gap-1 cursor-pointer `}
         >
-          {languageText}
-          <img src={languageIcon} className="w-6 h-6" alt="ico" />
-          {dropdown ? <IoMdArrowDropdown /> : <IoMdArrowDropup />}
+          <div className="text-[18px] text-secondary font-medium cursor-pointer flex items-center justify-center gap-1">
+            {languageText}
+            <img src={languageIcon} className="w-6 h-6" alt="ico" />
+            {dropdown ? <IoMdArrowDropdown /> : <IoMdArrowDropup />}
+          </div>
         </summary>
 
         <ul
-          className={`shadow-sm ${
-            darkMode ? "bg-dark shadow-white" : "bg-base-100 shadow-gray-300"
-          } flex flex-col  items-start dropdown-content    rounded-box w-28 mt-4 `}
+          className={`shadow-sm 
+            flex flex-col bg-white items-start dropdown-content    rounded-box w-28 mt-4 `}
         >
           <div
             onClick={() => {

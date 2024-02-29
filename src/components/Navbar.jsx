@@ -9,18 +9,32 @@ import LanguageController from "@/components/LanguageController";
 const Navbar = ({ language, setLanguage }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+  const navbar = {
+    en: {
+      about: "About",
+      work: "Work",
+      contact: "Contact",
+    },
+    es: {
+      about: "Acerca de",
+      work: "Trabajos",
+      contact: "Contacto",
+    },
+  };
+  const navbarContent = navbar[language];
   const navLinks = [
     {
       id: "about",
-      title: "About",
+      name: navbarContent.about,
     },
     {
       id: "work",
-      title: "Work",
+      name: navbarContent.work,
     },
     {
       id: "contact",
-      title: "Contact",
+      name: navbarContent.contact,
     },
   ];
   return (
@@ -50,17 +64,14 @@ const Navbar = ({ language, setLanguage }) => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+              className={`text-secondary hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => setActive(link.name)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`}>{link.name}</a>
             </li>
           ))}
-          <li>
-            <LanguageController language={language} setLanguage={setLanguage} />
-          </li>
+          <div className="w-[1px] h-6 bg-secondary " />
+          <LanguageController language={language} setLanguage={setLanguage} />
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
