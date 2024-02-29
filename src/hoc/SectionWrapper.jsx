@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { styles } from "@/styles";
 import { staggerContainer } from "@/utils/motion";
 
-const SectionWrapper = (Component, idName) =>
+const SectionWrapper = (Component, idName, language) =>
   function HOC() {
     return (
       <motion.section
@@ -15,7 +15,7 @@ const SectionWrapper = (Component, idName) =>
         <span className="hash-span" id={idName}>
           &nbsp;
         </span>
-        <Component />
+        <Component language={language} />
       </motion.section>
     );
   };

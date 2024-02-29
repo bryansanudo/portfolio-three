@@ -3,7 +3,22 @@ import { motion } from "framer-motion";
 import { styles } from "@/styles";
 import { ComputersCanvas } from "@/components/canvas";
 
-const Hero = () => {
+const Hero = ({ language }) => {
+  const hi = {
+    en: {
+      hello: "Hi, I'm",
+      name: "Bryan",
+      p1: "I develop visuals and modern",
+      p2: "user interfaces and web applications.",
+    },
+    es: {
+      hello: "Hola, soy",
+      name: "Bryan",
+      p1: "Desarrollo interfaces de usuario y ",
+      p2: "aplicaciones web modernas.",
+    },
+  };
+  const hiContent = hi[language];
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -15,11 +30,11 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Bryan</span>
+            {hiContent.hello} <span className="text-[#915eff]">Bryan</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop visuals and modern <br className="sm:block hidden" />
-            user interfaces and web applications.
+            {hiContent.p1} <br className="sm:block hidden" />
+            {hiContent.p2}
           </p>
         </div>
       </div>

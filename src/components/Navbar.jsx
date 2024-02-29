@@ -15,11 +15,13 @@ const Navbar = ({ language, setLanguage }) => {
       about: "About",
       work: "Work",
       contact: "Contact",
+      developer: "Frontend Developer",
     },
     es: {
-      about: "Acerca de",
+      about: "Acerca",
       work: "Trabajos",
       contact: "Contacto",
+      developer: "Desarrollador Frontend",
     },
   };
   const navbarContent = navbar[language];
@@ -55,7 +57,7 @@ const Navbar = ({ language, setLanguage }) => {
             Bryan &nbsp;
             <span className="sm:block hidden">
               {" "}
-              | &nbsp; Frontend Developer
+              | &nbsp;{navbarContent.developer}
             </span>
           </p>
         </Link>
