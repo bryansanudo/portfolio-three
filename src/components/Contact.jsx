@@ -11,8 +11,9 @@ import { staggerContainer } from "@/utils/motion";
 const Contact = ({ language }) => {
   const contactForm = {
     en: {
-      title1: "GET IN TOUCH",
-      title2: "Contact.",
+      title1:
+        "Thanks for checking out my portfolio. If you have any questions or want to collaborate, feel free to get in touch!",
+      title2: "Contact Me At.",
       name1: "Your Name",
       name2: "What's your name?",
       email1: "Your Email",
@@ -22,8 +23,9 @@ const Contact = ({ language }) => {
       send: "Send",
     },
     es: {
-      title1: "PONTE EN CONTACTO",
-      title2: "Contacto.",
+      title1:
+        "Gracias por revisar mi portafolio. Si tienes alguna pregunta o quieres colaborar, ¡no dudes en ponerte en contacto!",
+      title2: "Contactame.",
       name1: "Tu Nombre",
       name2: "¿Cuál es tu nombre?",
       email1: "Tu Correo Electrónico",
@@ -51,7 +53,9 @@ const Contact = ({ language }) => {
           variants={slideIn("left", "tween", 0.2, 1)}
           className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
         >
-          <p className={`${styles.sectionSubText}`}>
+          <p
+            className={`sm:text-[18px] text-[14px] text-secondary  tracking-wider`}
+          >
             {contactFormContent.title1}
           </p>
           <h3 className={`${styles.sectionHeadText}`}>
@@ -107,7 +111,7 @@ const Contact = ({ language }) => {
 
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+          className="xl:flex-1 xl:h-[750px] md:h-[550px] h-[350px] md:block hidden "
         >
           <EarthCanvas />
         </motion.div>

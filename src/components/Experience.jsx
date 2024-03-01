@@ -10,7 +10,7 @@ import { styles } from "@/styles";
 
 import { SectionWrapper } from "@/hoc";
 import { textVariant } from "@/utils/motion";
-import meta from "@/assets/company/meta.png";
+
 import eb3 from "@/assets/company/eb3.png";
 import manager from "@/assets/company/manager.png";
 import needweed from "@/assets/company/needweed.png";

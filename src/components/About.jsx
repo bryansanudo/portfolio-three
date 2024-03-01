@@ -4,9 +4,6 @@ import { styles } from "@/styles";
 import { fadeIn, textVariant } from "@/utils/motion";
 import Tilt from "react-parallax-tilt";
 import { SectionWrapper } from "@/hoc";
-import web from "@/assets/web.png";
-import mail from "@/assets/mail.png";
-import responsivo from "@/assets/responsivo.png";
 
 import { staggerContainer } from "@/utils/motion";
 import { FaCode } from "react-icons/fa6";

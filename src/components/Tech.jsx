@@ -86,7 +86,7 @@ const Tech = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-5 ">
+    <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 ">
       {tecs.map(({ id, imgUrl, title }) => (
         <div
           onMouseOver={() => setActive(id)}
