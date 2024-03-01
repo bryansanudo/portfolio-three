@@ -10,6 +10,9 @@ import gitHub from "@/assets/img/gitHub.svg";
 import motion from "@/assets/img/motion.svg";
 import illustrator from "@/assets/img/illustrator.svg";
 import firebase from "@/assets/img/firebase.svg";
+import ac from "@/assets/ac.svg";
+import nextjs from "@/assets/nextjs.svg";
+import premiere from "@/assets/premiere.svg";
 
 import Tilt from "react-parallax-tilt";
 
@@ -62,9 +65,24 @@ const Tech = () => {
       title: "Illustrator",
     },
     {
+      id: "tec-11",
+      imgUrl: nextjs,
+      title: "Next JS",
+    },
+    {
       id: "tec-10",
       imgUrl: firebase,
       title: "Firebase",
+    },
+    {
+      id: "tec-12",
+      imgUrl: ac,
+      title: "Active Campaign",
+    },
+    {
+      id: "tec-13",
+      imgUrl: premiere,
+      title: "Premiere",
     },
   ];
   return (

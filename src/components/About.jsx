@@ -115,7 +115,7 @@ const About = ({ language }) => {
             <Tilt className="xs:w-[250px] w-full">
               <motion.div
                 variants={fadeIn("right", "spring", 0.5 * id, 0.75)}
-                className="w-full green-ping-gradient p-[1px] rounded-[20px] shadow-card"
+                className="w-full  p-[1px] rounded-[20px] shadow-card "
               >
                 <div
                   options={{ max: 45, scale: 1, speed: 450 }}

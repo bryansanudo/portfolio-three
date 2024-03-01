@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
-import colImg from "@/assets/col.png";
-import enImg from "@/assets/en.png";
+/* import colImg from "@/assets/col.png";
+import enImg from "@/assets/en.png"; */
 import { styles } from "@/styles";
+import { IoLanguage } from "react-icons/io5";
 
+import enImg from "@/assets/en.svg";
+import esImg from "@/assets/es.svg";
 const LanguageController = ({ language = "en", setLanguage }) => {
   const [dropdown, setDropdown] = useState(true);
 
@@ -31,7 +34,7 @@ const LanguageController = ({ language = "en", setLanguage }) => {
     }
   };
 
-  let languageText;
+  /* let languageText;
   let languageIcon;
 
   if (language === "en") {
@@ -40,35 +43,38 @@ const LanguageController = ({ language = "en", setLanguage }) => {
   } else if (language === "es") {
     languageText = "Lenguaje";
     languageIcon = colImg;
-  }
+  } */
   return (
     <>
       <details className={`dropdown text-white   ${styles.subtitle}`}>
         <summary
           onClick={handleDropdown}
-          className={` flex  items-center justify-center gap-1 cursor-pointer `}
+          className={` flex  items-center justify-center gap-1 cursor-pointer w-full h-full `}
         >
-          <div className="text-[18px] text-secondary font-medium cursor-pointer flex items-center justify-center gap-1">
-            {languageText}
-            <img src={languageIcon} className="w-6 h-6" alt="ico" />
-            {dropdown ? <IoMdArrowDropdown /> : <IoMdArrowDropup />}
+          <div className="flex items-center justify-center p-2  text-secondary rounded-lg shadow-card hover:bg-tertiary hover:text-white  ">
+            <IoLanguage className="text-xl " />
+            {dropdown ? (
+              <IoMdArrowDropdown className="" />
+            ) : (
+              <IoMdArrowDropup className="" />
+            )}
           </div>
         </summary>
 
         <ul
           className={`shadow-sm 
-            flex flex-col bg-white items-start dropdown-content    rounded-box w-28 mt-4 `}
+            flex flex-col justify-start dropdown-content rounded-box w-40 bg-tertiary p-4 `}
         >
           <div
             onClick={() => {
               en();
               closeMenu();
             }}
-            className="w-full hover:bg-primary hover:text-white rounded-lg flex items-center justify-center"
+            className="w-full  hover:bg-primary p-1 hover:text-white rounded-lg flex items-center "
           >
             <div className="flex items-center justify-start gap-4  rounded-box  p-1 cursor-pointer ">
               <img src={enImg} className="h-6 w-6" alt="" />
-              <button>USD</button>
+              <button>English</button>
             </div>
           </div>
           <div
@@ -76,11 +82,11 @@ const LanguageController = ({ language = "en", setLanguage }) => {
               es();
               closeMenu();
             }}
-            className="w-full hover:bg-primary hover:text-white rounded-lg flex items-center justify-center"
+            className="w-full hover:bg-primary hover:text-white rounded-lg flex p-1 "
           >
             <div className="flex items-center justify-start gap-4  rounded-box  p-1 cursor-pointer ">
-              <img src={colImg} className="h-6 w-6" alt="" />
-              <button>COP</button>
+              <img src={esImg} className="h-6 w-6" alt="" />
+              <button>Español</button>
             </div>
           </div>
         </ul>
