@@ -25,12 +25,12 @@ function App() {
             <Hero language={language} />
           </div>
           <About language={language} />
-          <Experience />
+          <Experience language={language} />
           <Tech />
-          <Works />
+          <Works language={language} />
           {/* <Feedbacks /> */}
           <div className="relative z-0">
-            <Contact />
+            <Contact language={language} />
             <StarsCanvas />
           </div>
         </div>

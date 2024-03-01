@@ -15,6 +15,7 @@ import eb3 from "@/assets/company/eb3.png";
 import manager from "@/assets/company/manager.png";
 import needweed from "@/assets/company/needweed.png";
 import magrey from "@/assets/company/magrey.png";
+import { staggerContainer } from "@/utils/motion";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -56,21 +57,53 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-const Experience = () => {
+const Experience = ({ language = "es" }) => {
+  const workOne = {
+    en: {
+      title1: "React JS Developer",
+      company1: "EB-3 Workforce Solutions",
+      date1: "March 2020 - April 2021",
+      point1:
+        "Design, Developing and maintaining web applications using React JS and other related technologies",
+      point2: "Implementing responsive design",
+      point3: "Third-party application integrations",
+      point4:
+        "Collaborating with cross-functional members of team to create high-quality products",
+      point5:
+        "Implement and execute email marketing strategies through ActiveCampaign",
+      point6: "Design of pieces for social media",
+    },
+    es: {
+      title1: "React JS Developer",
+      company1: "EB-3 Workforce Solutions",
+      date1: "Marzo 2020 - Abril 2021",
+      point1:
+        "Diseñar, desarrollar y mantener aplicaciones web utilizando React JS y otras tecnologías relacionadas",
+      point2: "Implementación de diseño receptivo",
+      point3: "Integraciones de aplicaciones de terceros",
+      point4:
+        "Colaboración con miembros interfuncionales del equipo para crear productos de alta calidad",
+      point5:
+        "Implementar y ejecutar estrategias de marketing por correo electrónico a través de ActiveCampaign",
+      point6: "Diseño de piezas para redes sociales",
+    },
+  };
+  const workOneContent = workOne[language];
+
   const experiences = [
     {
-      title: "React JS Developer",
+      title: workOneContent.title1,
       company_name: "EB-3 Workforce Solutions",
       icon: eb3,
       iconBg: "#E6DEDD",
-      date: "March 2020 - April 2021",
+      date: workOneContent.date1,
       points: [
-        "Design, Developing and maintaining web applications using React JS and other related technologies",
-        "Implementing responsive design",
-        "third-party application integrations",
-        "Collaborating with cross-functional members of team to create high-quality products",
-        "Implement and execute email marketing strategies through ActiveCampaign",
-        "Design of pieces for social media",
+        workOneContent.point1,
+        workOneContent.point2,
+        workOneContent.point3,
+        workOneContent.point4,
+        workOneContent.point5,
+        workOneContent.point6,
       ],
     },
     {
@@ -112,20 +145,31 @@ const Experience = () => {
   ];
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubtext}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
-      </motion.div>
+      <motion.section
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      >
+        <span className="hash-span" id="work">
+          &nbsp;
+        </span>
+        <motion.div variants={textVariant()}>
+          <p className={`${styles.sectionSubText}`}>What I have done so far</p>
+          <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+        </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
+        <div className="mt-20 flex flex-col">
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} />
+            ))}
+          </VerticalTimeline>
+        </div>
+      </motion.section>
     </>
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default Experience;

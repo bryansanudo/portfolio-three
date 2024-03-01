@@ -21,6 +21,7 @@ import illustrator from "@/assets/img/illustrator.svg";
 import firebase from "@/assets/img/firebase.svg";
 
 import { fadeIn, textVariant } from "@/utils/motion";
+import { staggerContainer } from "@/utils/motion";
 
 const ProjectCard = ({
   index,
@@ -73,12 +74,24 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Works = ({ language }) => {
+  const workProjects = {
+    en: {
+      project1: "Magrey Barber",
+      description1:
+        "This project is written entirely in HTML, CSS and some JavaScriptThis, basically is a landing page that describes services and benefits of a Premium Barber Shop.",
+    },
+    es: {
+      project1: "Barberia Magrey",
+      description1: "magrey spanish",
+    },
+  };
+  const workProjectsContent = workProjects[language];
+
   const projects = [
     {
-      name: "Barberia Magrey",
-      description:
-        "This project is written entirely in HTML, CSS and some JavaScriptThis, basically is a landing page that describes services and benefits of a Premium Barber Shop. ",
+      name: workProjectsContent.project1,
+      description: workProjectsContent.description1,
       tags: [
         {
           name: "html",
@@ -166,30 +179,41 @@ const Works = () => {
   ];
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubtext}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
-      </motion.div>
+      <motion.section
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      >
+        <span className="hash-span" id="worssk">
+          &nbsp;
+        </span>
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubtext}>My Work</p>
+          <h2 className={styles.sectionHeadText}>Projects</h2>
+        </motion.div>
 
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each projects is briefly described
-          with links to live demos in it. It reflects my ability to solve
-          complex problems, work with differente technologies, and manage
-          projects effectively.
-        </motion.p>
-      </div>
-      <div className="mt-20 flex flex-wrap gap-7 ">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+        <div className="w-full flex">
+          <motion.p
+            variants={fadeIn("", 0.1, 1)}
+            className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          >
+            Following projects showcases my skills and experience through
+            real-world examples of my work. Each projects is briefly described
+            with links to live demos in it. It reflects my ability to solve
+            complex problems, work with differente technologies, and manage
+            projects effectively.
+          </motion.p>
+        </div>
+        <div className="mt-20 flex flex-wrap gap-7 ">
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </div>
+      </motion.section>
     </>
   );
 };
 
-export default SectionWrapper(Works, "works");
+export default Works;
