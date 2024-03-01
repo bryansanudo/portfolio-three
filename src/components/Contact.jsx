@@ -25,7 +25,7 @@ const Contact = ({ language }) => {
     es: {
       title1:
         "Gracias por revisar mi portafolio. Si tienes alguna pregunta o quieres colaborar, ¡no dudes en ponerte en contacto!",
-      title2: "Contactame.",
+      title2: "Contáctame.",
       name1: "Tu Nombre",
       name2: "¿Cuál es tu nombre?",
       email1: "Tu Correo Electrónico",

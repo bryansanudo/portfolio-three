@@ -103,7 +103,7 @@ const Experience = ({ language = "es" }) => {
 
   const workTwo = {
     en: {
-      title1: "Frontend Developer",
+      title1: "Freelance Full Stack Developer",
       company1: "Vet Academy",
       date1: "January 2024 - Febraury 2024",
       point1:
@@ -124,11 +124,11 @@ const Experience = ({ language = "es" }) => {
         "Design and development of intuitive and user-friendly interfaces to enhance the user experience at all stages, from registration to enrollment and access to courses content.",
     },
     es: {
-      title1: "Desarrollador Frontend",
+      title1: "Desarrollador Full Stack Freelance",
       company1: "Vet Academy",
       date1: "Enero de 2024 - Febrero de 2024",
       point1:
-        "Diseño, desarrollo y mantenimiento de una Aplicación Web utilizando React JS como frontend y Firebase como servicio backend.",
+        "Diseño, desarrollo y mantenimiento de una Aplicación Web utilizando React JS como Frontend y Firebase como servicio Backend.",
       point2: "Implementación de arquitectura de la información.",
       point3: "Implementación de Diseño Responsivo.",
       point4: "Resolución de problemas comerciales y de UX/UI.",
@@ -150,7 +150,7 @@ const Experience = ({ language = "es" }) => {
 
   const workThree = {
     en: {
-      title1: "Freelance Full Stack Developer",
+      title1: "Frontend Developer",
       company1: "Manager Asociados S.A.S",
       date1: "March 2021 - September 2023",
       point1:
@@ -162,7 +162,7 @@ const Experience = ({ language = "es" }) => {
       point6: "Integration of third-party applications.",
     },
     es: {
-      title1: "Desarrollador Full Stack Freelance",
+      title1: "Desarrollador Frontend ",
       company1: "Manager Asociados S.A.S",
       date1: "Marzo de 2021 - Septiembre de 2023",
       point1:
@@ -204,7 +204,7 @@ const Experience = ({ language = "es" }) => {
     en: {
       title1: "Freelance Frontend Developer",
       company1: "Barberia Magrey",
-      date1: "September 2022",
+      date1: "February 2021",
       point1:
         "Development an attractive and functional Web Site using HTML and CSS.",
       point2: "Implementation Responsive Design.",
@@ -212,7 +212,7 @@ const Experience = ({ language = "es" }) => {
     es: {
       title1: "Desarrollador Frontend Freelance",
       company1: "Barberia Magrey",
-      date1: "Septiembre de 2022",
+      date1: "Febrero de 2021",
       point1:
         "Desarrollo de un sitio web atractivo y funcional utilizando HTML y CSS.",
       point2: "Implementación de Diseño Responsivo.",

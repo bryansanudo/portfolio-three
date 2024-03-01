@@ -68,12 +68,12 @@ const About = ({ language }) => {
     en: {
       title1: "Introduction",
       title2: "Overview.",
-      p: "I'm a Frontend developer with experience in React JS and Tailwind CSS. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life !",
+      p: "I'm a Frontend developer with experience in React JS and Tailwind CSS! I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!",
     },
     es: {
       title1: "Introducción",
       title2: "Visión general.",
-      p: "Soy un desarrollador Frontend con experiencia en React JS y Tailwind CSS. Aprendo rápido y colaboro estrechamente con los clientes para crear soluciones eficientes, escalables y fáciles de usar que resuelven problemas del mundo real. Trabajemos juntos para dar vida a tus ideas !",
+      p: "Soy un desarrollador Frontend con experiencia en React JS y Tailwind CSS! Aprendo rápido y colaboro estrechamente con los clientes para crear soluciones eficientes, escalables y fáciles de usar que resuelven problemas del mundo real. ¡Trabajemos juntos para dar vida a tus ideas!",
     },
   };
   const introductionContent = introduction[language];
