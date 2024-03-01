@@ -31,10 +31,9 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div
+    <div
       className="cursor-pointer"
       onClick={() => window.open(source_code_link, "_blank")}
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     >
       <Tilt
         options={{
@@ -69,7 +68,7 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
@@ -149,7 +148,7 @@ const Works = ({ language }) => {
         },
       ],
       image: wfs,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://www.eb3wfs.com/",
     },
     {
       name: workProjectsContent.project2,
@@ -177,7 +176,7 @@ const Works = ({ language }) => {
         },
       ],
       image: visalaw,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://ebvisalaw.com/",
     },
     {
       name: workProjectsContent.project3,
@@ -210,7 +209,7 @@ const Works = ({ language }) => {
         },
       ],
       image: vetacademy,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://vetacademy.com.co/",
     },
     {
       name: workProjectsContent.project4,
@@ -239,7 +238,7 @@ const Works = ({ language }) => {
         },
       ],
       image: eliana,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://eliana-nweed.netlify.app/",
     },
     {
       name: workProjectsContent.project5,
@@ -262,7 +261,7 @@ const Works = ({ language }) => {
         },
       ],
       image: magrey,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://magrey.vercel.app/",
     },
   ];
   return (
