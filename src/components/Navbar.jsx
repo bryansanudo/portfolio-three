@@ -1,14 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "@/styles";
+import { IoMdClose } from "react-icons/io";
 
-import { logo, menu, close } from "@/assets";
+import { IoMdMenu } from "react-icons/io";
+
+import { BsFiletypePdf } from "react-icons/bs";
+import { GrDocumentPdf } from "react-icons/gr";
 
 import LanguageController from "@/components/LanguageController";
 
 const Navbar = ({ language, setLanguage }) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+  const hdv = {
+    es: {
+      name: "Descargar HDV",
+      link: "/Bryan-Es.pdf",
+    },
+    en: {
+      name: "Download Resume",
+      link: "/Bryan-En.pdf",
+    },
+  };
+  const hdvContent = hdv[language];
 
   const navbar = {
     en: {
@@ -44,23 +60,14 @@ const Navbar = ({ language, setLanguage }) => {
       className={`${styles.paddingX} w-full flex items-center  py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Bryan &nbsp;
-            <span className="sm:block hidden">
-              {" "}
-              | &nbsp;{navbarContent.developer}
-            </span>
-          </p>
-        </Link>
+        <a download={true} href={hdvContent.link}>
+          <button className="flex items-center gap-2 text-secondary hover:text-white">
+            <div className=" text-[18px] font-medium cursor-pointer">
+              {hdvContent.name}
+            </div>
+            <GrDocumentPdf className="text-2xl md:flex hidden " />
+          </button>
+        </a>
 
         <ul className="list-none hidden sm:flex flex-row items-center justify-center gap-10 ">
           {navLinks.map((link) => (
@@ -76,16 +83,28 @@ const Navbar = ({ language, setLanguage }) => {
           <LanguageController language={language} setLanguage={setLanguage} />
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
+          <LanguageController language={language} setLanguage={setLanguage} />
+
+          {toggle ? (
+            <div
+              onClick={() => setToggle(!toggle)}
+              className="text-secondary cursor-pointer"
+            >
+              <IoMdClose className="text-secondary text-2xl" />
+            </div>
+          ) : (
+            <div
+              onClick={() => setToggle(!toggle)}
+              className="text-white cursor-pointer"
+            >
+              <IoMdMenu className="text-secondary text-2xl" />
+            </div>
+          )}
+
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}
+            } p-6 bg-tertiary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl `}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
@@ -96,10 +115,10 @@ const Navbar = ({ language, setLanguage }) => {
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(link.title);
+                    setActive(link.name);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a href={`#${link.id}`}>{link.name}</a>
                 </li>
               ))}
             </ul>

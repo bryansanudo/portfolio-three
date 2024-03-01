@@ -46,7 +46,9 @@ const LanguageController = ({ language = "en", setLanguage }) => {
   } */
   return (
     <>
-      <details className={`dropdown text-white   ${styles.subtitle}`}>
+      <details
+        className={`dropdown dropdown-left dropdown-bottom text-white   ${styles.subtitle}`}
+      >
         <summary
           onClick={handleDropdown}
           className={` flex  items-center justify-center gap-1 cursor-pointer w-full h-full `}

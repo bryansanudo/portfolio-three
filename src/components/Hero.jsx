@@ -8,8 +8,8 @@ const Hero = ({ language }) => {
     en: {
       hello: "Hi, I'm",
       name: "Bryan",
-      p1: "I develop visuals and modern",
-      p2: "user interfaces and web applications.",
+      p1: "Development of user interfaces and",
+      p2: "modern Web applications.",
     },
     es: {
       hello: "Hola, soy",

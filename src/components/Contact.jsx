@@ -35,19 +35,6 @@ const Contact = ({ language }) => {
   };
   const contactFormContent = contactForm[language];
 
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {};
-
-  const handleSubmit = (e) => {};
-
   return (
     <motion.section
       variants={staggerContainer()}
@@ -72,8 +59,8 @@ const Contact = ({ language }) => {
           </h3>
 
           <form
-            ref={formRef}
-            onSubmit={handleSubmit}
+            action="https://getform.io/f/pbnroqeb"
+            method="POST"
             className="mt-12 flex flex-col gap-8"
           >
             <label className="flex flex-col">
@@ -83,8 +70,6 @@ const Contact = ({ language }) => {
               <input
                 type="text"
                 name="name"
-                value={form.name}
-                onChange={handleChange}
                 placeholder={contactFormContent.name2}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounde-lg outline-none border-nonae font-medium"
               />
@@ -96,8 +81,6 @@ const Contact = ({ language }) => {
               <input
                 type="email"
                 name="email"
-                value={form.email}
-                onChange={handleChange}
                 placeholder={contactFormContent.email2}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounde-lg outline-none border-nonae font-medium"
               />
@@ -109,8 +92,6 @@ const Contact = ({ language }) => {
               <textarea
                 rows="7"
                 name="message"
-                value={form.message}
-                onChange={handleChange}
                 placeholder={contactFormContent.message2}
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounde-lg outline-none border-nonae font-medium"
               />

@@ -9,7 +9,9 @@ import mail from "@/assets/mail.png";
 import responsivo from "@/assets/responsivo.png";
 
 import { staggerContainer } from "@/utils/motion";
-
+import { FaCode } from "react-icons/fa6";
+import { SiAdobe } from "react-icons/si";
+import { MdOutlineMail } from "react-icons/md";
 /* const ServiceCard = ({ index, title, icon, language }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -50,18 +52,18 @@ const About = ({ language }) => {
     {
       id: 1,
       title: skillsContent.develop,
-      icon: web,
+      icon: <FaCode />,
     },
     {
       id: 2,
       title: skillsContent.design,
-      icon: responsivo,
+      icon: <SiAdobe />,
     },
 
     {
       id: 3,
       title: skillsContent.email,
-      icon: mail,
+      icon: <MdOutlineMail />,
     },
   ];
 
@@ -69,12 +71,12 @@ const About = ({ language }) => {
     en: {
       title1: "Introduction",
       title2: "Overview.",
-      p: "I'm a skilled Frontend developer with experience in React JS and Tailwind CSS. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life !",
+      p: "I'm a Frontend developer with experience in React JS and Tailwind CSS. I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life !",
     },
     es: {
       title1: "Introducción",
       title2: "Visión general.",
-      p: "Soy un desarrollador Frontend experto con experiencia en React JS y Tailwind CSS. Aprendo rápido y colaboro estrechamente con los clientes para crear soluciones eficientes, escalables y fáciles de usar que resuelven problemas del mundo real. Trabajemos juntos para dar vida a tus ideas !",
+      p: "Soy un desarrollador Frontend con experiencia en React JS y Tailwind CSS. Aprendo rápido y colaboro estrechamente con los clientes para crear soluciones eficientes, escalables y fáciles de usar que resuelven problemas del mundo real. Trabajemos juntos para dar vida a tus ideas !",
     },
   };
   const introductionContent = introduction[language];
@@ -112,7 +114,7 @@ const About = ({ language }) => {
         </motion.p> */}
         <div className="mt-20 flex flex-wrap items-center jc gap-10 ">
           {services.map(({ icon, title, id }) => (
-            <Tilt className="xs:w-[250px] w-full">
+            <Tilt key={id} className="xs:w-[250px] w-full">
               <motion.div
                 variants={fadeIn("right", "spring", 0.5 * id, 0.75)}
                 className="w-full  p-[1px] rounded-[20px] shadow-card "
@@ -121,11 +123,13 @@ const About = ({ language }) => {
                   options={{ max: 45, scale: 1, speed: 450 }}
                   className=" bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
                 >
-                  <img
+                  <span className="text-white text-6xl">{icon}</span>
+
+                  {/* <img
                     src={icon}
                     alt={title}
                     className="w-40 h-40 object-contain"
-                  />
+                  /> */}
                   <h3 className="text-white text-[20px] font-bold text-center">
                     {title}
                   </h3>

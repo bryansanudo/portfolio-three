@@ -39,7 +39,7 @@ export default {
 
           info: "#94171A",
 
-          success: "#00f6ff",
+          success: "#151030",
 
           warning: "#94171A",
 

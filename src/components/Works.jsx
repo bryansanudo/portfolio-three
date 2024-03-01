@@ -1,8 +1,6 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "@/styles";
-import { github } from "@/assets";
-import { SectionWrapper } from "@/hoc";
 
 import magrey from "@/assets/works/mock-magrey.png";
 import eliana from "@/assets/works/mock-eliana.png";
