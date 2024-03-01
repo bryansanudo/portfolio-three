@@ -14,7 +14,7 @@ import {
 import { useState } from "react";
 
 function App() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("es");
 
   return (
     <>
