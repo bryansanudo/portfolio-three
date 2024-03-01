@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/hoc";
 
 import magrey from "@/assets/works/mock-magrey.png";
 import eliana from "@/assets/works/mock-eliana.png";
+import vetacademy from "@/assets/works/mock-vetacademy.png";
 import wfs from "@/assets/works/mock-wfs.png";
 import visalaw from "@/assets/works/mock-visalaw.png";
 import { TbHandClick } from "react-icons/tb";
@@ -58,12 +59,12 @@ const ProjectCard = ({
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-3">
           {tags.map((tag) => (
             <div key={tag.name}>
               <img
                 src={tag.img}
-                className={`w-8 h-8 shadow-md rounded-full ${tag.shadow}  `}
+                className={`w-8 h-8 shadow-sm rounded-full ${tag.shadow}  `}
                 alt=""
               />
             </div>
@@ -77,13 +78,48 @@ const ProjectCard = ({
 const Works = ({ language }) => {
   const workProjects = {
     en: {
-      project1: "Magrey Barber",
+      title0: "MY WORK",
+      title1: "Projects.",
+      subtitle1:
+        "Following projects showcases my skills and experience through real-world examples of my work. Each projects is briefly described with links to live demos in it. It reflects my ability to solve complex problems, work with differente technologies, and manage projects effectively.",
+      project1: "EB-3 Workforce Solutions",
       description1:
-        "This project is written entirely in HTML, CSS and some JavaScriptThis, basically is a landing page that describes services and benefits of a Premium Barber Shop.",
+        "Development of a Website using React JS and Tailwind CSS. The website's design is centered around strategically distributing information to impact different audiences, employees, and employers. Specific sections and visual approaches are used for each type of audience.",
+      project2: "EB Visa Law",
+      description2:
+        "Development of a Website for the EB-3 Workforce Solutions law firm, using React JS and Tailwind CSS. The website is designed to showcase the various legal services and consultations offered by the firm, as well as provide relevant information on the types of visas available for migrating to the United States.",
+      project3: "Vet Academy",
+      description3:
+        "Development of a Full Stack application using React JS and Tailwind CSS for the Frontend, and Firebase as the backend service. The application has two main components: a website displaying the services and courses offered by Vet Academy, and a virtual classroom providing access to all course content for enrolled users.",
+      project4: "Need Weed",
+      description4:
+        "Development of a Website using React JS and Tailwind CSS for a vaping company. The main goal was to convert all the content from an Instagram account into a Website.",
+      project5: "Barberia Magrey",
+      description5:
+        "Development a Landing Page using HTML, CSS, and very little JavaScript. The page aims to present the services and benefits of a premium barbershop in an attractive and persuasive manner.",
     },
     es: {
-      project1: "Barberia Magrey",
-      description1: "magrey spanish",
+      title0: "MI TRABAJO",
+      title1: "Proyectos.",
+      subtitle1:
+        "Los siguientes proyectos muestran mis habilidades y experiencia a través de ejemplos del mundo real de mi trabajo. Cada proyecto se describe brevemente con enlaces a demos en vivo. Refleja mi capacidad para resolver problemas complejos, trabajar con diferentes tecnologías y gestionar proyectos de manera efectiva.",
+
+      project1: "EB-3 Workforce Solutions",
+      description1:
+        "Desarrollo de una Página Web utilizando React JS y Tailwind CSS. El diseño del sitio web se centra en distribuir la información de manera estratégica para inpactar audiencias diferentes, empleados y empleadores. Se utilizan secciones específicas y enfoques visuales para cada tipo de audiencia.",
+      project2: "EB Visa Law",
+      description2:
+        "Desarrollo de una Página Web para la firma de abogados de EB-3 Workforce Solutions, utilizando React JS y Tailwind CSS. El sitio web está diseñado para mostrar los diferentes servicios legales y asesorías ofrecidas por la firma, así como proporcionar información relevante sobre los tipos de visados que existen para migrar a Estados Unidos.",
+      project3: "Vet Academy",
+      description3:
+        "Desarrollo de una aplicación Full Stack utilizando React JS y Tailwind CSS para el frontend, y Firebase como servicio backend. La aplicación tiene dos componentes principales: una página web que muestra los servicios y cursos ofrecidos por Vet Academy, y un aula virtual que proporciona el acceso a todo contenido de los cursos para los  usuarios matriculados.",
+
+      project4: "Need Weed",
+      description4:
+        "Desarrollo de una Página Web utilizando React JS y Tailwind CSS para una empresa de vapeadores. El objetivo principal fue convertir todo el contenido de una cuenta de Instagram en una Página Web.",
+      project5: "Barberia Magrey",
+      description5:
+        "Desarrollo de una Landing Page utilizando HTML, CSS y muy poco JavaScript. La página tiene como objetivo presentar los servicios y beneficios de una barberia premium de manera atractiva y persuasiva.",
     },
   };
   const workProjectsContent = workProjects[language];
@@ -94,86 +130,140 @@ const Works = ({ language }) => {
       description: workProjectsContent.description1,
       tags: [
         {
+          name: "react",
+          img: react,
+          shadow: "shadow-[#07B6D5]",
+        },
+        {
+          name: "javascript",
+          img: js,
+          shadow: "shadow-[#FECA2A]",
+        },
+        {
+          name: "tailwind",
+          img: tailwind,
+          shadow: "shadow-[#07B6D5]",
+        },
+        {
           name: "html",
-          color: "color-html",
           img: html,
-          shadow: "shadow-[#FECA2A]",
-        },
-        {
-          name: "css",
-          color: "color-css",
-          img: css,
-        },
-      ],
-      image: magrey,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Need Weed",
-      description:
-        "This project is a prototype of a full stack application, is a shopping cart with custom design and website product management . ",
-      tags: [
-        {
-          name: "react js",
-          color: "color-react",
-          img: react,
-        },
-        {
-          name: "firebase",
-          color: "color-javascript",
-          img: firebase,
-          shadow: "shadow-[#FECA2A]",
-        },
-        {
-          name: "tailwind css",
-          color: "color-tailwind",
-          img: tailwind,
-        },
-      ],
-      image: eliana,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "EB-3 Workforce Solutions",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "react js",
-          color: "color-react",
-          img: react,
-        },
-        {
-          name: "framer motion",
-          color: "color-motion",
-          img: framer,
-        },
-        {
-          name: "tailwind css",
-          color: "color-tailwind",
-          img: tailwind,
+          shadow: "shadow-[#F16529]",
         },
       ],
       image: wfs,
       source_code_link: "https://github.com/",
     },
     {
-      name: "EB Visa Law",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      name: workProjectsContent.project2,
+      description: workProjectsContent.description2,
       tags: [
         {
-          name: "react js",
-          color: "color-react",
+          name: "react",
           img: react,
+          shadow: "shadow-[#07B6D5]",
+        },
+        {
+          name: "javascript",
+          img: js,
+          shadow: "shadow-[#FECA2A]",
         },
         {
           name: "tailwind",
-          color: "color-tailwind",
           img: tailwind,
+          shadow: "shadow-[#07B6D5]",
+        },
+        {
+          name: "html",
+          img: html,
+          shadow: "shadow-[#F16529]",
         },
       ],
       image: visalaw,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: workProjectsContent.project3,
+      description: workProjectsContent.description3,
+      tags: [
+        {
+          name: "react",
+          img: react,
+          shadow: "shadow-[#07B6D5]",
+        },
+        {
+          name: "firebase",
+          img: firebase,
+          shadow: "shadow-[#FECA2A]",
+        },
+        {
+          name: "tailwind",
+          img: tailwind,
+          shadow: "shadow-[#07B6D5]",
+        },
+        {
+          name: "javascript",
+          img: js,
+          shadow: "shadow-[#FECA2A]",
+        },
+        {
+          name: "html",
+          img: html,
+          shadow: "shadow-[#F16529]",
+        },
+      ],
+      image: vetacademy,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: workProjectsContent.project4,
+      description: workProjectsContent.description4,
+      tags: [
+        {
+          name: "react",
+          img: react,
+          shadow: "shadow-[#07B6D5]",
+        },
+
+        {
+          name: "javascript",
+          img: js,
+          shadow: "shadow-[#FECA2A]",
+        },
+        {
+          name: "tailwind",
+          img: tailwind,
+          shadow: "shadow-[#07B6D5]",
+        },
+        {
+          name: "html",
+          img: html,
+          shadow: "shadow-[#F16529]",
+        },
+      ],
+      image: eliana,
+      source_code_link: "https://github.com/",
+    },
+    {
+      name: workProjectsContent.project5,
+      description: workProjectsContent.description5,
+      tags: [
+        {
+          name: "html",
+          img: html,
+          shadow: "shadow-[#F16529]",
+        },
+        {
+          name: "css",
+          img: css,
+          shadow: "shadow-[#2965F1]",
+        },
+        {
+          name: "javascript",
+          img: js,
+          shadow: "shadow-[#FECA2A]",
+        },
+      ],
+      image: magrey,
       source_code_link: "https://github.com/",
     },
   ];
@@ -190,8 +280,12 @@ const Works = ({ language }) => {
           &nbsp;
         </span>
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubtext}>My Work</p>
-          <h2 className={styles.sectionHeadText}>Projects</h2>
+          <p className={`${styles.sectionSubText}`}>
+            {workProjectsContent.title0}
+          </p>
+          <h2 className={styles.sectionHeadText}>
+            {workProjectsContent.title1}
+          </h2>
         </motion.div>
 
         <div className="w-full flex">
@@ -199,11 +293,7 @@ const Works = ({ language }) => {
             variants={fadeIn("", 0.1, 1)}
             className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
-            Following projects showcases my skills and experience through
-            real-world examples of my work. Each projects is briefly described
-            with links to live demos in it. It reflects my ability to solve
-            complex problems, work with differente technologies, and manage
-            projects effectively.
+            {workProjectsContent.subtitle1}
           </motion.p>
         </div>
         <div className="mt-20 flex flex-wrap gap-7 ">
