@@ -21,7 +21,7 @@ const Navbar = ({ language, setLanguage }) => {
     },
     en: {
       name: "Download Resume",
-      link: "/Bryan-En.pdf",
+      link: "/Bryan-Es.pdf",
     },
   };
   const hdvContent = hdv[language];
